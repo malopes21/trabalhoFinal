@@ -18,7 +18,9 @@ public class EmpresaService implements EmpresaServiceAPI {
     @Override
     public Empresa get(Long id) {
         try {
+
             return repository.findById(id).get();
+            
         } catch (Exception ex){
             throw new EmpresaNotFoundException(ex.getMessage());
         }
