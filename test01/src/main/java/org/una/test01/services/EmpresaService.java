@@ -20,7 +20,7 @@ public class EmpresaService implements EmpresaServiceAPI {
         try {
 
             return repository.findById(id).get();
-            
+
         } catch (Exception ex){
             throw new EmpresaNotFoundException(ex.getMessage());
         }
